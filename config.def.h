@@ -65,5 +65,13 @@ static const char unknown_str[] = "n/a";
  */
 static const struct arg args[] = {
 	/* function format          argument */
-	{ datetime, "%s",           "%F %T" },
+	{ run_command,	"^c#b16286^ %2s |", "/home/alokin/.config/scripts/sb-forecast "},
+	{ wifi_essid, "^c#98c379^ %s |","wlp0s20f3" },
+	{ run_command,	"^c#b16286^ %2s |", "/home/alokin/.config/scripts/sb-nettraf "},
+/*	{ battery_perc, "^c#b16286^  %s%% |", "BAT0"},*/
+	{ run_command,	"^c#b16286^ %2s |", "/home/alokin/.config/scripts/sb-battery "},
+	{ cpu_perc, "^c#fb4934^ %s%% |", NULL},	
+	{ ram_perc, "^c#458588^  %s%% |", NULL},	
+	{ run_command,"^c#b16286^ %2s |",   "/home/alokin/.config/scripts/vol.sh" },
+	{ datetime, "^c#98c379^%s",           "%F %T" },
 };
